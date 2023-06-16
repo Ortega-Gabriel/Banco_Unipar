@@ -12,30 +12,30 @@ import java.util.List;
 public class AgenciaDAO {
     
     private static final String INSERT =
-            "INSERT INTO AGENCIA (CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
+            "INSERT INTO AGENCIA (ID, CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
             + "RA, BANCO_ID)"
-            + "VALUES (?, ?, ?, ?, ?, ?);";
+            + "VALUES (?, ?, ?, ?, ?, ?, ?);";
     
     private static final String FIND_ALL =
-            "SELECT CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
+            "SELECT ID, CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
             + "RA, BANCO_ID FROM AGENCIA";
     
     private static final String FIND_BY_ID = 
-            "SELECT CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
+            "SELECT ID, CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
             + "RA, BANCO_ID FROM AGENCIA"
             + "WHERE ID = ?";
     
-    private static final String DELETE_BY_ID =
-            "DELETE * FROM PAIS WHERE ID = ?";
-    
-    private static final String UPDATE =
-            "UPDATE PAIS SET "
-            + "CODIGO = ?,"
-            + "DIGITO = ?,"
-            + "RAZAOSOCIAL = ?"
-            + "CNPJ = ?"
-            + "RA = ?"
-            + "BANCO_ID = ?"
+    private static final String DELETE_BY_ID = 
+            "DELETE FROM AGENCIA WHERE ID = ?";
+
+    private static final String UPDATE = "UPDATE AGENCIA SET "
+            + "ID = ?, "
+            + "CODIGO = ?, "
+            + "DIGITO = ?, "
+            + "RAZAOSOCIAL = ?, "
+            + "CNPJ = ?, "
+            + "RA = ?, "
+            + "BANCO_ID = ? "
             + "WHERE ID = ?";
     
     public void insert(Agencia agencia) throws SQLException {

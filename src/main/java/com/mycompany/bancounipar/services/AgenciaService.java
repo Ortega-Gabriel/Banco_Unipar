@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.bancounipar.services;
 
 import com.mycompany.bancounipar.exceptions.CampoNaoInformadoException;
@@ -12,10 +8,7 @@ import com.mycompany.bancounipar.repositories.AgenciaDAO;
 import java.sql.SQLException;
 import java.util.List;
 
-/**
- *
- * @author crist
- */
+
 public class AgenciaService {
     
     private void validar(Agencia agencia) throws 

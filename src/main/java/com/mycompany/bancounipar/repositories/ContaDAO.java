@@ -13,24 +13,24 @@ public class ContaDAO {
     
     public static final String INSERT =
             "INSERT INTO CONTA (ID, NUMERO, DIGITO, SALDO, TIPO, AGENCIA_ID,"
-            + "PESSOA_ID)"
+            + "PESSOA_ID) "
             + "VALUES (?, ?, ?, ?, ?, ?, ?) FROM CONTA";
     
     public static final String FIND_ALL =
-            "SELECT ID, NUMERO, DIGITO, SALDO, TIPO, AGENCIA_ID, PESSOA_ID"
+            "SELECT ID, NUMERO, DIGITO, SALDO, TIPO, AGENCIA_ID, PESSOA_ID "
             + "FROM CONTA";
     
     public static final String FIND_BY_ID =
-            "SELECT ID, NUMERO, DIGITO, SALDO, TIPO, AGENCIA_ID, PESSOA_ID"
+            "SELECT ID, NUMERO, DIGITO, SALDO, TIPO, AGENCIA_ID, PESSOA_ID "
             + "FROM CONTA"
             + "WHERE ID = ?";
     
     public static final String DELETE_BY_ID =
-            "DELETE * FROM CONTA"
+            "DELETE * FROM CONTA "
             + "WHERE ID = ?";
     
     public static final String UPDATE =
-            "UPDATE CONTA SET"
+            "UPDATE CONTA SET "
             + "ID = ?,"
             + "NUMERO = ?,"
             + "DIGITO = ?,"

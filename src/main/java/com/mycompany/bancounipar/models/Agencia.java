@@ -10,16 +10,18 @@ public class Agencia extends EntidadeBaseAbstrata{
     private String razaoSocial;
     private String cnpj;
     private Banco banco;
+    private String ra;
 
     public Agencia() {
     }
 
-    public Agencia(String codigo, String digito, String razaoSocial, String cnpj, Banco banco) {
+    public Agencia(String codigo, String digito, String razaoSocial, String cnpj, Banco banco, String ra) {
         this.codigo = codigo;
         this.digito = digito;
         this.razaoSocial = razaoSocial;
         this.cnpj = cnpj;
         this.banco = banco;
+        this.ra = ra;
     }
 
     public String getCodigo() {
@@ -56,6 +58,14 @@ public class Agencia extends EntidadeBaseAbstrata{
 
     public Banco getBanco() {
         return banco;
+    }
+    
+    public String getRa() {
+        return ra;
+    }
+    
+    public void setRa() {
+        this.ra = ra;
     }
 
     public void setBanco(Banco banco) {

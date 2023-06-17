@@ -13,19 +13,19 @@ import java.util.List;
 public class CidadeDAO {
     
     private static final String INSERT =
-            "INSERT INTO CIDADE (NOME, RA, ESTADO_ID, DATACADASTRO)"
+            "INSERT INTO CIDADE (NOME, RA, ESTADO_ID, DATACADASTRO) "
             + "VALUES (?, ?, ? ,?)";
     private static final String FIND_ALL =
-            "SELECT ID, NOME, RA, ESTADO_ID, DATACADASTRO"
+            "SELECT ID, NOME, RA, ESTADO_ID, DATACADASTRO "
             + "FROM CIDADE";
     private static final String FIND_BY_ID =
-            "SELECT ID, NOME, RA, ESTADO_ID, DATACADASTRO"
+            "SELECT ID, NOME, RA, ESTADO_ID, DATACADASTRO "
             + "FROM CIDADE WHERE ID = ?";
     private static final String DELETE_BY_ID = 
-            "DELETE ID, NOME, RA, ESTADO_ID, DATACADASTRO"
+            "DELETE ID, NOME, RA, ESTADO_ID, DATACADASTRO "
             + "FROM CIDADE WHERE ID = ?";
     private static final String UPDATE =
-            "UPDATE CIDADE SET"
+            "UPDATE CIDADE SET "
             + "ID = ?,"
             + "NOME = ?,"
             + "RA = ?,"

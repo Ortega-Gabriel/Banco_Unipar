@@ -13,20 +13,20 @@ public class AgenciaDAO {
     
     private static final String INSERT =
             "INSERT INTO AGENCIA (ID, CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
-            + "RA, BANCO_ID)"
+            + "RA, BANCO_ID) "
             + "VALUES (?, ?, ?, ?, ?, ?, ?);";
     
     private static final String FIND_ALL =
             "SELECT ID, CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
-            + "RA, BANCO_ID FROM AGENCIA";
+            + "RA, BANCO_ID FROM AGENCIA;";
     
     private static final String FIND_BY_ID = 
             "SELECT ID, CODIGO, DIGITO, RAZAOSOCIAL, CNPJ, "
-            + "RA, BANCO_ID FROM AGENCIA"
-            + "WHERE ID = ?";
+            + "RA, BANCO_ID FROM AGENCIA "
+            + "WHERE ID = ?;";
     
     private static final String DELETE_BY_ID = 
-            "DELETE FROM AGENCIA WHERE ID = ?";
+            "DELETE FROM AGENCIA WHERE ID = ?;";
 
     private static final String UPDATE = "UPDATE AGENCIA SET "
             + "ID = ?, "
@@ -66,13 +66,13 @@ public class AgenciaDAO {
     }
     
     public List<Agencia> findAll() throws SQLException{
-        
         List<Agencia> retorno = new ArrayList<>();
-        Connection conn = null;
-        PreparedStatement pstmt = null;
+        Connection conn = null;       
+        PreparedStatement pstmt = null;      
         ResultSet rs = null;
         
         try{
+            
             conn = new DatabaseUtils().getConnection();
             pstmt = conn.prepareStatement(FIND_ALL);
             rs = pstmt.executeQuery();
@@ -86,9 +86,12 @@ public class AgenciaDAO {
                 agencia.setRazaoSocial(rs.getString("RAZAOSOCIAL"));
                 agencia.setCnpj(rs.getString("CNPJ"));
                 agencia.setRa(rs.getString("RA"));
+                
                 agencia.setBanco(new BancoDAO().findById(rs.getInt(
                         "BANCO_ID")));
+                System.out.println("cu");
                 retorno.add(agencia);
+                
             }
             
             
@@ -170,8 +173,9 @@ public class AgenciaDAO {
             pstmt.setString(3, agencia.getDigito());
             pstmt.setString(4, agencia.getRazaoSocial());
             pstmt.setString(5, agencia.getCnpj());
-            pstmt.setString(6, agencia.getRa());
-            pstmt.setInt(7, agencia.getBanco().getId());
+            pstmt.setInt(6, agencia.getBanco().getId());
+            pstmt.setString(7, agencia.getRa());
+            
             
             pstmt.executeUpdate();
             

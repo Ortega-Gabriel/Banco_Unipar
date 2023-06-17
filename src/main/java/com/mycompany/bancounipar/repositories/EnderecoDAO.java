@@ -25,7 +25,7 @@ public class EnderecoDAO {
     public static final String DELETE_BY_ID =
             "DELETE * FROM PAIS WHERE ID = ?";
     public static final String UPDATE =
-            "UPDATE ENDERECO SET"
+            "UPDATE ENDERECO SET "
             + "ID = ?,"
             + "LOGRADOURO = ?,"
             + "NUMERO = ?,"
@@ -33,7 +33,7 @@ public class EnderecoDAO {
             + "CEP = ?,"
             + "COMPLEMENTO = ?,"
             + "PESSOA = ?,"
-            + "CIDADE = ?"
+            + "CIDADE = ? "
             + "WHERE ID = ?";
     
     public void insert(Endereco endereco) throws SQLException{

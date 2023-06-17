@@ -12,14 +12,14 @@ import java.util.List;
 public class PessoaJuridicaDAO {
     private static final String INSERT =
             "INSERT INTO PESSOAJURIDICA (RAZAOSOCIAL, CNPJ, CNAEPRINCIPAL, "
-            + "FANTASIA, PESSOA_ID)"
+            + "FANTASIA, PESSOA_ID) "
             + "VALUES (?, ?, ?, ?, ?);";
     private static final String FIND_ALL =
             "SELECT RAZAOSOCIAL, CNPJ, CNAEPRINCIPAL, "
             + "FANTASIA, PESSOA_ID FROM PESSOAJURIDICA;";
     private static final String FIND_BY_ID =
             "SELECT RAZAOSOCIAL, CNPJ, CNAEPRINCIPAL, "
-            + "FANTASIA, PESSOA_ID FROM PESSOAJURIDICA"
+            + "FANTASIA, PESSOA_ID FROM PESSOAJURIDICA "
             + "WHERE ID = ?";
     private static final String DELETE_BY_ID = 
             "DELETE FROM PESSOAJURIDICA WHERE ID = ?";
@@ -29,7 +29,7 @@ public class PessoaJuridicaDAO {
             + "CNPJ = ?,"
             + "CNAEPRINCIPAL = ?,"
             + "FANTASIA = ?,"
-            + "PESSOA_ID = ?"
+            + "PESSOA_ID = ? "
             + "WHERE ID = ?";
     
    public void insert(PessoaJuridica pessoaJuridica) throws SQLException{

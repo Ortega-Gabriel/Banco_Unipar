@@ -37,7 +37,7 @@ public class TransacaoDAO {
             + "TIPO = ?,"
             + "RA = ?,"
             + "CONTA_ORIGEM = ?,"
-            + "CONTA_DESTINO = ?"
+            + "CONTA_DESTINO = ? "
             + "WHERE ID = ?";
     
     public void insert(Transacao transacao) throws SQLException {

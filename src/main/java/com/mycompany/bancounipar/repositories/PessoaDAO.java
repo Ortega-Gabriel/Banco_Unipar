@@ -19,18 +19,18 @@ public class PessoaDAO {
             "SELECT ID, EMAIL, RA, DATACADASTRO FROM PESSOA";
     
     public static final String FIND_BY_ID =
-            "SELECT ID, EMAIL, RA, DATACADASTRO FROM PESSOA"
+            "SELECT ID, EMAIL, RA, DATACADASTRO FROM PESSOA "
             + "WHERE ID = ?";
     
     public static final String DELETE_BY_ID =
-            "DELETE ID, EMAIL, RA, DATACADASTRO FROM PESSOA"
+            "DELETE ID, EMAIL, RA, DATACADASTRO FROM PESSOA "
             + "WHERE ID = ?";
     
     public static final String UPDATE =
-            "UPDATE PESSOA SET"
+            "UPDATE PESSOA SET "
             + "ID = ?,"
             + "EMAIL = ?,"
-            + "RA = ?"
+            + "RA = ? "
             + "WHERE ID = ?";
     
     public static void insert(Pessoa pessoa) throws SQLException {

@@ -13,12 +13,12 @@ import java.util.List;
 public class EstadoDAO {
     
     private static final String INSERT =
-            "INSERT INTO ESTADO (ID, NOME, SIGLA, RA, PAIS_ID)"
+            "INSERT INTO ESTADO (ID, NOME, SIGLA, RA, PAIS_ID) "
             + "VALUES (?, ?, ?, ?, ?);";
     private static final String FIND_ALL =
             "SELECT ID, NOME, SIGLA, RA, PAIS_ID FROM ESTADO;";
     private static final String FIND_BY_ID =
-            "SELECT ID, NOME, SIGLA, RA, PAIS_ID FROM ESTADO"
+            "SELECT ID, NOME, SIGLA, RA, PAIS_ID FROM ESTADO "
             + "WHERE ID = ?";
     private static final String DELETE_BY_ID = 
             "DELETE FROM ESTADO WHERE ID = ?";
@@ -26,7 +26,7 @@ public class EstadoDAO {
             "UPDATE ESTADO SET NOME = ?,"
             + "SIGLA = ?,"
             + "RA = ?,"
-            + "PAIS_ID = ?"
+            + "PAIS_ID = ? "
             + "WHERE ID = ?";
     
    public void insert(Estado estado) throws SQLException{

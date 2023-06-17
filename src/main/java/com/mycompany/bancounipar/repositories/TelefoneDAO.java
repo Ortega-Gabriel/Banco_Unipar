@@ -12,7 +12,7 @@ import java.util.List;
 public class TelefoneDAO {
     private static final String INSERT =
             "INSERT INTO TELEFONE (ID, NUMERO, OPERADORA, RA, "
-            + "AGENCIA_ID, PESSOA_ID)"
+            + "AGENCIA_ID, PESSOA_ID) "
             + "VALUES (?, ?, ?, ?, ?, ?);";
     private static final String FIND_ALL =
             "SELECT ID, NUMERO, OPERADORA, RA, "
@@ -20,7 +20,7 @@ public class TelefoneDAO {
     private static final String FIND_BY_ID =
             "SELECT ID, NUMERO, OPERADORA, RA, "
             + "AGENCIA_ID, PESSOA_ID "
-            + "FROM TELEFONE"
+            + "FROM TELEFONE "
             + "WHERE ID = ?";
     private static final String DELETE_BY_ID = 
             "DELETE FROM TELEFONE WHERE ID = ?";
@@ -31,7 +31,7 @@ public class TelefoneDAO {
             + "OPERADORA = ?,"
             + "RA = ?,"
             + "AGENCIA_ID = ?,"
-            + "PESSOA_ID = ?"
+            + "PESSOA_ID = ? "
             + "WHERE ID = ?";
     
    public void insert(Telefone telefone) throws SQLException{

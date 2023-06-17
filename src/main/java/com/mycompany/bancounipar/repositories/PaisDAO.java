@@ -13,7 +13,7 @@ import java.util.List;
 public class PaisDAO {
     
     private static final String INSERT = 
-            "INSERT INTO PAIS (ID, NOME, SIGLA, RA)"
+            "INSERT INTO PAIS (ID, NOME, SIGLA, RA) "
             + "VALUES (?, ?, ?,?)";
     
     private static final String FIND_ALL = 

@@ -14,24 +14,24 @@ public class BancoDAO {
     
     
     public static final String INSERT =
-            "INSERT INTO BANCO (ID, NOME, RA)"
+            "INSERT INTO BANCO (ID, NOME, RA) "
             + "VALUES (?, ?, ?)";
     
     public static final String FIND_ALL =
             "SELECT ID, NOME, RA, DATACADASTRO";
     
     public static final String FIND_BY_ID =
-            "SELECT ID, NOME, RA, DATACADASTRO FROM PAIS"
+            "SELECT ID, NOME, RA, DATACADASTRO FROM BANCO "
             + "WHERE ID = ?";
     
     public static final String DELETE_BY_ID =
             "DELETE FROM PAIS WHERE ID = ?";
     
     public static final String UPDATE =
-            "UPDATE PAIS SET"
+            "UPDATE PAIS SET "
             + "ID = ?,"
             + "NOME = ?,"
-            + "RA = ?"
+            + "RA = ? "
             + "WHERE ID = ?";
     
     public void insert(Banco banco) throws SQLException{
@@ -96,12 +96,15 @@ public class BancoDAO {
         ResultSet rs = null;
         
         try{
+            
             conn = new DatabaseUtils().getConnection();
             pstmt = conn.prepareStatement(FIND_BY_ID);
             pstmt.setInt(1, id);
             rs = pstmt.executeQuery();
             
             if(rs.next()){
+                retorno = new Banco();
+                System.out.println("Teste");
                 retorno.setId(rs.getInt("ID"));
                 retorno.setNome(rs.getString("NOME"));
                 retorno.setRa(rs.getString("RA")); 
